@@ -1,0 +1,107 @@
+# Waypoints - 中文
+
+> 原文來源：[waypoints - github](https://github.com/imakewebthings/waypoints)
+
+Waypoints 是一個 library，可以在滾動到元素時，輕鬆執行函數。
+
+```js
+var waypoint = new Waypoint({
+  element: document.getElementById('thing'),
+  handler: function(direction) {
+    alert('You have scrolled to a thing')
+  }
+})
+```
+
+新手請查看使用指南 [Getting Started](http://imakewebthings.com/waypoints/guides/getting-started).
+
+[閱讀完整的文件](http://imakewebthings.com/waypoints/api/waypoint)，有關使用和自定義的更多詳細訊息。
+
+## Getting Started
+
+`lib/` 目錄包含 jQuery 和 Zepto 的版本，以及沒有使用任何框架的版本。選擇適合需求的版本加入專案。
+
+```
+<script src="/path/to/noframework.waypoints.min.js"></script>
+```
+
+## Debugging
+
+`lib/` 目錄包含除錯用的 waypoint debug javascript。
+
+```
+<script src="/path/to/waypoints.js"></script>
+<script src="/path/to/waypoints.debug.js"></script>
+```
+
+## A Basic Waypoint
+
+透過實體化全域 Waypoint calss 來創建 waypoint。在創建新 Waypoint 時，我們必須傳遞一個選取元素。您可以在此選取元素上設置許多屬性，但其中兩個屬性是必需的，`element` 和 `handler`。
+
+```
+var waypoint = new Waypoint({
+  element: document.getElementById('basic-waypoint'),
+  handler: function() {
+    notify('Basic waypoint triggered')
+  }
+})
+```
+
+`element` 告訴 Waypoints 在滾動期間要觀察該元素的位置，而 `handler` 是當該元素的頂部到達 viewport 頂部時將觸發的函式。
+
+## Directions
+
+觸發航點時，處理程序函式將傳遞 `direction` 參數。
+
+```
+var waypoint = new Waypoint({
+  element: document.getElementById('direction-waypoint'),
+  handler: function(direction) {
+    notify('Direction: ' + direction)
+  }
+})
+```
+
+## Offsets
+
+預設情況下，當元素頂部到達 viewport 頂部時，會觸發一個 waypoint。
+
+以下範例是從元素頂部距離 viewport 頂部 20px 時觸發它。
+
+```
+var waypoint = new Waypoint({
+  element: document.getElementById('px-offset-waypoint'),
+  handler: function(direction) {
+    notify('I am 20px from the top of the window')
+  },
+  offset: 20 
+})
+```
+
+## this
+
+`this` 關鍵字是對 Waypoint 實體的引用。使用此 `this` 來訪問 API 中的所有屬性和方法。
+
+最有用的屬性之一是 `element`，即 Waypoint 的 DOM 元素。
+
+```
+var waypoint = new Waypoint({
+  element: document.getElementById('element-waypoint'),
+  handler: function(direction) {
+    notify(this.element.id + ' triggers at ' + this.triggerPoint)
+  },
+  offset: '75%'
+})
+```
+
+## API documentation
+
+[API documentation](http://imakewebthings.com/waypoints/api/waypoint) 更多可用的所有選項、方法和屬性。
+
+## Shortcuts
+
+除了正常的 Waypoints 腳本之外，還可以使用擴充功能，讓常見的 UI 方式更容易實現:
+
+- [Infinite Scrolling](http://imakewebthings.com/waypoints/shortcuts/infinite-scroll)
+- [Sticky Elements](http://imakewebthings.com/waypoints/shortcuts/sticky-elements)
+- [Inview Detection](http://imakewebthings.com/waypoints/shortcuts/inview)
