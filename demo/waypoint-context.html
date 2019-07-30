@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #overflow-scroll {
+            overflow: scroll;
+            height: 300px;
+            background: #aaa;
+        }
+
+        #context-example {
+            background: #555;
+            color: #fff;
+            height: 600px;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="overflow-scroll">
+        <div id="context-example">我是一個帶有自定義環境 “＃overflow-scroll” div 的 waypoint。</div>
+    </div>
+
+
+    <!-- Waypoints - 4.0.1  -->
+    <script src="../lib/noframework.waypoints.min.js"></script>
+
+    <script>
+        var waypoint = new Waypoint({
+            element: document.getElementById('context-example'),
+            handler: function () {
+                console.log('Context example triggered')
+            },
+            offset: "30%",
+            context: document.getElementById('overflow-scroll')
+        })
+    </script>
+</body>
+
+</html>
