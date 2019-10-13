@@ -45,7 +45,7 @@ var waypoint = new Waypoint({
 
 `element` 告訴 Waypoints 在滾動期間要觀察該元素的位置，而 `handler` 是當該元素的頂部到達 viewport 頂部時將觸發的函式。
 
-[DEMO](./)
+[DEMO](./demo/waypoint-basic.html)
 
 ## Directions
 
