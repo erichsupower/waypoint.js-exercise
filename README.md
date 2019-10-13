@@ -1,8 +1,11 @@
-# Waypoints - 中文
+# Waypoints
 
-> 原文來源：[waypoints - github](https://github.com/imakewebthings/waypoints)
 
 Waypoints 是一個 library，可以在滾動到元素時，輕鬆執行函數。
+
+新手使用指南：[Getting Started](http://imakewebthings.com/waypoints/guides/getting-started)。
+
+有關使用和自定義的更多詳細訊息，請閱讀完整的[官方文件](http://imakewebthings.com/waypoints/api/waypoint)。
 
 ```js
 var waypoint = new Waypoint({
@@ -13,26 +16,19 @@ var waypoint = new Waypoint({
 })
 ```
 
-新手請查看使用指南 [Getting Started](http://imakewebthings.com/waypoints/guides/getting-started).
-
-[閱讀完整的文件](http://imakewebthings.com/waypoints/api/waypoint)，有關使用和自定義的更多詳細訊息。
-
 ## Getting Started
 
-`lib/` 目錄包含 jQuery 和 Zepto 的版本，以及沒有使用任何框架的版本。選擇適合需求的版本加入專案。
+`lib/` 目錄包含 jQuery 和 Zepto 的版本，以及沒有使用任何框架的版本。只需要選擇適合的版本加入專案。
 
-```
+```html
+<!- 使用 jQuery 框架的版本 ->
+<script src="/path/to/jquery.waypoints.min.js"></script>
+
+<!- 沒有使用任何框架的版本 ->
 <script src="/path/to/noframework.waypoints.min.js"></script>
-```
-
-## Debugging
-
-`lib/` 目錄包含除錯用的 waypoint debug javascript。
 
 ```
-<script src="/path/to/waypoints.js"></script>
-<script src="/path/to/waypoints.debug.js"></script>
-```
+
 
 ## A Basic Waypoint
 
@@ -48,6 +44,8 @@ var waypoint = new Waypoint({
 ```
 
 `element` 告訴 Waypoints 在滾動期間要觀察該元素的位置，而 `handler` 是當該元素的頂部到達 viewport 頂部時將觸發的函式。
+
+[DEMO](./)
 
 ## Directions
 

@@ -80,9 +80,10 @@
     <script>
         var waypoint = new Waypoint({
             element: document.getElementById('something'),
-            handler: function () {
+            handler: function (direction) {
                 // some code here
-                console.log('Basic waypoint triggered')
+                console.log('Basic waypoint triggered');
+                console.log('Direction: ' + direction);
             },
             offset: '50%'
         })
