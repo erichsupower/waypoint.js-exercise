@@ -21,7 +21,7 @@ var waypoint = new Waypoint({
 `lib/` 目錄包含 jQuery 和 Zepto 的版本，以及沒有使用任何框架的版本。只需要選擇適合的版本加入專案。
 
 ```html
-<!- 使用 jQuery 框架的版本 ->
+<!- 使用jQuery框架的版本 ->
 <script src="/path/to/jquery.waypoints.min.js"></script>
 
 <!- 沒有使用任何框架的版本 ->
@@ -32,7 +32,7 @@ var waypoint = new Waypoint({
 
 ## A Basic Waypoint
 
-透過實體化全域 Waypoint calss 來創建 waypoint。在創建新 Waypoint 時，我們必須傳遞一個選取元素。您可以在此選取元素上設置許多屬性，但其中兩個屬性是必需的，`element` 和 `handler`。
+在創建新 Waypoint 時，我們必須傳遞一個選取元素。您可以在此選取元素上設置許多屬性，但其中兩個屬性是必需的，`element` 和 `handler`。
 
 ```
 var waypoint = new Waypoint({
@@ -92,9 +92,23 @@ var waypoint = new Waypoint({
 })
 ```
 
-## API documentation
+## 可使用在自定義區塊內
+waypoint 也可偵測在區塊內的元素。
 
-[API documentation](http://imakewebthings.com/waypoints/api/waypoint) 更多可用的所有選項、方法和屬性。
+[DEMO](./demo/waypoint-context.html)
+
+也可偵測區塊內水平移動的元素。
+
+[DEMO](./demo/waypoint-horizontal.html)
+
+## 偵測元素的高度
+
+[DEMO](./demo/waypoint-height.html)
+
+## 加入 CSS 屬性
+為目前偵測的元素加入 CSS 行內樣式。
+
+[DEMO](./demo/waypoint-animate.html)
 
 ## Shortcuts
 
@@ -103,3 +117,7 @@ var waypoint = new Waypoint({
 - [Infinite Scrolling](http://imakewebthings.com/waypoints/shortcuts/infinite-scroll)
 - [Sticky Elements](http://imakewebthings.com/waypoints/shortcuts/sticky-elements)
 - [Inview Detection](http://imakewebthings.com/waypoints/shortcuts/inview)
+
+## API documentation
+
+[API documentation](http://imakewebthings.com/waypoints/api/waypoint) 更多可用的所有選項、方法和屬性。

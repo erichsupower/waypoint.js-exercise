@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Waypoint - jQuery</title>
+    <title>Waypoint - Animate</title>
 </head>
 
 <body>
-
     <p>
         -<br>
         -<br>
@@ -37,11 +36,7 @@
         -<br>
     </p>
     <div id="something">
-        Something block. Something block. Something block.<br>
-        Something block. Something block. Something block.<br>
-        Something block. Something block. Something block.<br>
-        Something block. Something block. Something block.<br>
-        Something block. Something block. Something block.
+        console.log('Basic waypoint triggered')<br>
     </div>
     <p>
         -<br>
@@ -64,18 +59,29 @@
         -<br>
         -<br>
         -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
+        -<br>
     </p>
-
-    <!-- jQuery Core 1.12.4  -->
+     <!-- jQuery 1.x -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
     <!-- Waypoints - 4.0.1  -->
-    <script src="../lib/jquery.waypoints.min.js"></script>
+    <script src="../lib/jquery.waypoints.js"></script>
 
     <script>
         $('#something')
-            .css('opacity', 0) // 立即隱藏元素
+            .css('opacity', 0) // immediately hide element
             .waypoint(function (direction) {
                 if (direction === 'down') {
                     $(this.element).animate({
@@ -88,7 +94,7 @@
                 }
             }, {
                 offset: '50%'
-            });
+            })
     </script>
 </body>
 

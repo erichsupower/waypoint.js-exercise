@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waypoint - Horizontal</title>
+    <style>
+        #overflow-scroll {
+            overflow: auto;
+            height: 300px;
+            width: 600px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #horizontal-waypoint {
+            width: 1000px;
+            height: 100%;
+            padding: 10px;
+            margin-left: 150px;
+            background: #555;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overflow-scroll">
+        <div id="horizontal-waypoint">Horizontal</div>
+    </div>
+
+    <!-- Waypoints - 4.0.1  -->
+    <script src="../lib/noframework.waypoints.min.js"></script>
+
+    <script>
+        var waypoint = new Waypoint({
+            element: document.getElementById('horizontal-waypoint'),
+            handler: function (direction) {
+                console.log('Horizontal waypoint triggered in the ' + direction + ' direction')
+                console.log('======================================');
+            },
+            context: document.getElementById('overflow-scroll'),
+            horizontal: true
+        })       
+    </script>
+</body>
+
+</html>

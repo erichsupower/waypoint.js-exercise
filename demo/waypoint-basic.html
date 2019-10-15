@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <p>
         -<br>
         -<br>
@@ -73,6 +72,7 @@
         -<br>
         -<br>
     </p>
+    
 
     <!-- Waypoints - 4.0.1  -->
     <script src="../lib/noframework.waypoints.min.js"></script>
@@ -81,9 +81,25 @@
         var waypoint = new Waypoint({
             element: document.getElementById('something'),
             handler: function (direction) {
-                // some code here
+                // 加入要執行的程式
                 console.log('Basic waypoint triggered');
+
+                // 印出目前偵測元素的 id
+                console.log('Waypoint element id: ' + this.element.id);
+
+                // 印出目前偵測元素它所參照的元素(windows)
+                console.log('Context: ' + this.context.element);
+
+                // 印出頁面滑動的狀態 Up or Down
                 console.log('Direction: ' + direction);
+
+                // 印出Offset的值
+                console.log('Offset option: ' + this.options.offset);
+
+                // 印出元素在頁面上實際觸發的數值
+                console.log('Trigger point: ' + this.triggerPoint);
+
+                console.log('======================================');
             },
             offset: '50%'
         })
